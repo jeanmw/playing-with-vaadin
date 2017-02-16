@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Import Web Component polyfills and all Vaadin Core Elements. -->
+
+        <!-- CDN -->
+        <script src="https://cdn.vaadin.com/vaadin-core-elements/latest/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <link href="https://cdn.vaadin.com/vaadin-core-elements/latest/vaadin-core-elements/vaadin-core-elements.html" rel="import">
+
+        <script src="index.js"></script>
+        <link rel="stylesheet" is="custom-style" href="style.css"<link/>
+        <style is="custom-style">
+            vaadin-grid {
+                --primary-color: #f442aa;
+                --vaadin-grid-row-height: 40px;
+                --vaadin-grid-header-row-height: 44px;
+                --vaadin-grid-footer-row-height: 44px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <vaadin-grid selection-mode="multi">
+            <table>
+                <!-- Define the columns and their mapping to data properties. -->
+                <col name="firstName">
+                <col name="lastName">
+                <col name="email">
+
+                <!-- Define the column headings. -->
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+            </table>
+        </vaadin-grid>
+
+        <vaadin-combo-box
+          label="Veggies"
+          value="broccoli">
+        </vaadin-combo-box>
+
+    </body>
+</html>
